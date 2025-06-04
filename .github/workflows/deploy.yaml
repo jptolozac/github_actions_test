@@ -2,7 +2,7 @@ name: Deploy to server
 on: push
 
 jobs:
-  first_jobs:
+  first_job:
     runs-on: ubuntu-latest
 
     steps:
@@ -10,6 +10,7 @@ jobs:
       run: echo "Hola Mundo"
 
   second_job:
+    depends-on: first_job
     runs-on: ubuntu-latest
 
     steps:
